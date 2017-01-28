@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="vodaassistant.haikaroselab.com.vodaassistant">
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.READ_CONTACTS" />
+    <uses-permission android:name="android.permission.WRITE_CONTACTS" />
+    <uses-permission android:name="android.permission.RECEIVE_SMS" />
+    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
+    <uses-permission android:name="android.permission.SEND_SMS" />
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <uses-permission android:name="android.permission.VIBRATE" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@drawable/ic_launcher"
+        android:label="@string/app_name"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+        <activity
+            android:name=".vodaassistant.activities.SplashActivity"
+            android:theme="@style/AppTheme.NoActionBar">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".vodaassistant.activities.StartActivity"
+            android:label="@string/title_activity_start"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".vodaassistant.activities.ReportProblemActivity"
+            android:label="report problem" />
+        <activity
+            android:name=".vodaassistant.activities.SettingsActivity"
+            android:label="report problem" />
+        <activity
+            android:name=".vodaassistant.activities.StatusActivity"
+            android:label="report problem" />
+        <activity
+            android:name=".vodaassistant.activities.TextPlanActivity"
+            android:label="sent response counter" />
+        <activity
+            android:name=".vodaassistant.activities.InfopasserActivity"
+            android:label="send sms to groups" />
+        <activity
+            android:name=".vodaassistant.activities.AssistantActivity"
+            android:label="select your assistant"
+            android:theme="@style/AppTheme" />
+        <activity
+            android:name=".vodaassistant.activities.FavoritesActivity"
+            android:label="Favorites list" />
+        <activity
+            android:name=".vodaassistant.activities.ContactsActivity"
+            android:label="contacts" />
+        <activity
+            android:name=".vodaassistant.activities.RedirectedActivity"
+            android:label="redirected contacts"
+            android:theme="@style/colorRed" />
+        <activity
+            android:name=".vodaassistant.activities.InformationManagerActivity"
+            android:label="information service" />
+        <activity
+            android:name=".vodaassistant.activities.MembersActivity"
+            android:label="Remove members" />
+        <activity
+            android:name=".vodaassistant.activities.GroupAdderActivity"
+            android:label="create a group" />
+        <activity
+            android:name=".vodaassistant.activities.MemberAdderActivity"
+            android:label="Adding member" />
+        <activity
+            android:name=".vodaassistant.activities.OpenGroupActivity"
+            android:label="create a group" />
+
+        <service
+            android:name=".vodaServices.TimeHasExpiredIntentService"
+            android:exported="false" />
+        <service
+            android:name=".vodaServices.InfopasserService"
+            android:exported="false" />
+        <service
+            android:name=".vodaServices.SendSmsService"
+            android:exported="false" />
+
+        <receiver android:name=".receivers.BootCompleted">
+            <intent-filter>
+                <action android:name="android.intent.action.BOOT_COMPLETED" />
+            </intent-filter>
+        </receiver>
+        <receiver android:name=".receivers.PhoneCallReceiver">
+            <intent-filter>
+                <action android:name="android.intent.action.PHONE_STATE" />
+            </intent-filter>
+        </receiver>
+        <receiver
+            android:name=".receivers.SMSReceiver"
+            android:enabled="true"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.provider.Telephony.SMS_RECEIVED" />
+            </intent-filter>
+        </receiver>
+
+        <activity android:name=".vodaassistant.activities.AboutActivity" />
+        <activity
+            android:name=".vodaassistant.activities.ExpireExcuseDurationActivity"
+            android:label="@string/title_activity_main"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity android:name=".vodaassistant.activities.PaymentDetailsActivity"></activity>
+    </application>
+
+</manifest>

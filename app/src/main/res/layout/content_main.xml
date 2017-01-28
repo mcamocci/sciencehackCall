@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    android:orientation="vertical"
+    android:background="@drawable/welcome"
+    tools:context=".vodaassistant.activities.ExpireExcuseDurationActivity"
+    tools:showIn="@layout/activity_main">
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:fontFamily="sans-serif-light"
+        android:layout_margin="16dp"
+        android:padding="16dp"
+        android:background="#fff"
+        android:text="Please specify for how long you will be busy on what you are doing."/>
+    <RadioGroup
+        android:layout_width="match_parent"
+        android:layout_margin="16dp"
+        android:layout_height="wrap_content">
+        <RadioButton
+            android:id="@+id/option_one"
+            android:onClick="onRadioItemClicked"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:textColor="#fff"
+            android:background="@color/colorPrimary"
+            android:fontFamily="sans-serif-light"
+            android:drawableLeft="@android:color/transparent"
+            android:drawablePadding="50dp"
+            android:buttonTint="#fff"
+            android:text="i will clear my status when am done"/>
+
+        <RadioButton
+            android:id="@+id/option_two"
+            android:onClick="onRadioItemClicked"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:background="#A8B400"
+            android:textColor="#fff"
+            android:fontFamily="sans-serif-light"
+            android:drawableLeft="@android:color/transparent"
+            android:drawablePadding="50dp"
+            android:buttonTint="#fff"
+            android:text="after 30 minutes"/>
+        <RadioButton
+            android:id="@+id/option_three"
+            android:onClick="onRadioItemClicked"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:background="@color/colorPrimary"
+            android:textColor="#fff"
+            android:drawableLeft="@android:color/transparent"
+            android:drawablePadding="50dp"
+            android:fontFamily="sans-serif-light"
+            android:buttonTint="#fff"
+            android:text="after 1 hour"/>
+        <RadioButton
+            android:id="@+id/option_four"
+            android:onClick="onRadioItemClicked"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:background="#A8B400"
+            android:textColor="#fff"
+            android:drawableLeft="@android:color/transparent"
+            android:drawablePadding="50dp"
+            android:fontFamily="sans-serif-light"
+            android:buttonTint="#fff"
+            android:text="after 2 hours"/>
+        <RadioButton
+            android:id="@+id/option_five"
+            android:onClick="onRadioItemClicked"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:background="@color/colorPrimary"
+            android:textColor="#fff"
+            android:drawableLeft="@android:color/transparent"
+            android:drawablePadding="50dp"
+            android:fontFamily="sans-serif-light"
+            android:buttonTint="#fff"
+            android:text="after 3 hours"/>
+        <RadioButton
+            android:id="@+id/option_six"
+            android:onClick="onRadioItemClicked"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:background="#A8B400"
+            android:textColor="#fff"
+            android:drawableLeft="@android:color/transparent"
+            android:drawablePadding="50dp"
+            android:fontFamily="sans-serif-light"
+            android:buttonTint="#fff"
+            android:text="after 4 hours"/>
+        <RadioButton
+            android:id="@+id/option_seven"
+            android:onClick="onRadioItemClicked"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:textColor="#fff"
+            android:background="@color/colorPrimary"
+            android:drawableLeft="@android:color/transparent"
+            android:drawablePadding="50dp"
+            android:fontFamily="sans-serif-light"
+            android:buttonTint="#fff"
+            android:text="after 5 hours"/>
+
+    </RadioGroup>
+
+</LinearLayout>
